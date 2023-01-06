@@ -18,8 +18,7 @@ void print(){
 				  printf("%d", status[i][j]);
 				else
 				  printf("%d ", status[i][j]);
-			}
-			  
+			}  
 		}
 		printf("\n");
 	}
@@ -84,6 +83,7 @@ int main(void){
 			   j++;			
 			}
         }
+
         else if(!strcmp(s, "shiftright")){
         	for(i=1; i<10001; i++)
         	  status[10][i] = status[9][i];
@@ -94,19 +94,16 @@ int main(void){
         		j--;
 			}
 			for(i=1; i<10001; i++)
-			  status[0][i] = status[10][i];
-        		
+			  status[0][i] = status[10][i];	
 		}
         else if(!strcmp(s, "clear")){
         	for(i=0; i<11; i++){
         		for(j=1; j<10001; j++)
         		  status[i][j] = 0;
-			}
-        	
+			}	
 		}
-		else if(!strcmp(s, "print")){
+		else if(!strcmp(s, "print"))
 			print();
-		} 
 		else if (!strcmp(s, "exit"))
             break;
 	}
